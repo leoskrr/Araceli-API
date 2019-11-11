@@ -1,0 +1,9 @@
+module.exports = {
+    mongo: {
+        ip: ""
+    },
+    server: {
+        ip: "localhost",
+        port: 3307,
+    }
+}

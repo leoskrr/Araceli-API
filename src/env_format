@@ -1,9 +1,12 @@
 module.exports = {
     mongo: {
-        ip: ""
+        db: ""
     },
     server: {
-        ip: "localhost",
-        port: 3307,
+        ip: "",
+        port: ,
+    },
+    auth: {
+        secret: ""
     }
 }

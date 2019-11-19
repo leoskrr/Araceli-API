@@ -88,9 +88,9 @@ Failed output:
 Status Code: 400 or 500
 
 ```
-- #### Story
-  - Create
-    - POST: _/stories_
+### 2.2 - Story
+  - #### Create
+    POST: _/stories_
     ```
     Input: 
     {
@@ -112,8 +112,8 @@ Status Code: 400 or 500
     Status code: 400 or 500
     
     ```
-  - Show all
-    - GET: _/stories_
+  - #### Show all
+    GET: _/stories_
     ```
     Success output:
     [
@@ -143,8 +143,8 @@ Status Code: 400 or 500
     Status code: 400 or 500
     
     ```
-  - Show one
-    - GET: _/stories/storyId_
+  - #### Show one
+    GET: _/stories/storyId_
     ```
     Success output:
     {

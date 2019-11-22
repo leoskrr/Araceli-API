@@ -7,7 +7,7 @@
 
 ### 1.1 - Folder Structure
 - src: all folders inclunding app's code
-- src > apps: folders with the Model, Middlewares and Controllers content 
+- src > apps: folders with Model, Middlewares and Controllers content 
 - src > utils: includes app's functions
 - src > server.js: app's main script, It makes all the connection between routes, database, ...
 - src > routes.js
@@ -34,60 +34,60 @@ module.exports = {
 ### 2.1 - User authentication
 - #### Sign up
   POST: _/users_
-```
-Input:
+    ```
+    Input:
 
-{
-  "name": "user's name",
-  "email": "user's email",
-  "password": "typed password"
-}
+    {
+      "name": "user's name",
+      "email": "user's email",
+      "password": "typed password"
+    }
 
----
-Success output:
+    ---
+    Success output:
 
-user: {
-  "name": "user's name",
-  "email": "user's email"
-}
-Status Code: 200
+    user: {
+      "name": "user's name",
+      "email": "user's email"
+    }
+    Status Code: 200
 
----
-Failed output:
+    ---
+    Failed output:
 
-{
-  "error": "error message"
-}
-Status Code: 400 or 500
+    {
+      "error": "error message"
+    }
+    Status Code: 400 or 500
 
-```
+    ```
 - #### Sign in
   POST: _/login_
-```
-Input:
+    ```
+    Input:
 
-{
-  "email": "user's email",
-  "password": "typed password"
-}
+    {
+      "email": "user's email",
+      "password": "typed password"
+    }
 
----
-Success output:
+    ---
+    Success output:
 
-user: {
-  "id": "user's id"
-}
-Status Code: 200
+    user: {
+      "id": "user's id"
+    }
+    Status Code: 200
 
----
-Failed output:
+    ---
+    Failed output:
 
-{
-  "error": "error message"
-}
-Status Code: 400 or 500
+    {
+      "error": "error message"
+    }
+    Status Code: 400 or 500
 
-```
+    ```
 ### 2.2 - Story
   - #### Create
     POST: _/stories_

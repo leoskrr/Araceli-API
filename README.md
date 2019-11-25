@@ -181,3 +181,19 @@ module.exports = {
     Status code: 400 or 500
     
     ```
+  - #### Update
+    PATCH: _stories/storyId_
+    ```
+    Success output:
+   
+    Status code: 200
+    
+    ---
+    Failed output:
+    
+    {
+      "error": "error message"
+    }
+    Status code: 400 or 500
+    
+    ```

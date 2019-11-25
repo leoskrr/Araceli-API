@@ -4,6 +4,7 @@ const UserController = require('./app/controllers/UserController');
 const StoryController = require('./app/controllers/StoryController');
 //Middlewares
 const auth = require('./app/middlewares/Auth');
+
 module.exports = app => {
 
     app.post('/login', AuthController.signIn);
@@ -20,7 +21,7 @@ module.exports = app => {
    app.route('/stories/:id')
       .all(auth)
       .get(StoryController.show)
+      .patch(StoryController.update)
+      .delete(StoryController.delete);
     
-    
-
 }

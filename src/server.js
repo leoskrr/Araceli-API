@@ -11,6 +11,7 @@ const port = process.env.PORT || server.port;
 mongoose.connect(`mongodb+srv://${mongodb}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false
 }).catch(err => console.log(err));
 
 const app = express();

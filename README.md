@@ -1,13 +1,13 @@
 # Araceli's Rest API ®
 
 ## 1 - Initial informations 
-- Languague: JavaScript (NodeJS)
+- Language: JavaScript (NodeJS)
 - Database: MongoDB Atlas
 - Authentication method: JWT (using a bearer token in authorization header)
 
 ### 1.1 - Folder Structure
 - src: all folders inclunding app's code
-- src > apps: folders with Model, Middlewares and Controllers content 
+- src > apps: folders with the Model, Middlewares and Controllers content 
 - src > utils: includes app's functions
 - src > server.js: app's main script, It makes all the connection between routes, database, ...
 - src > routes.js
@@ -155,22 +155,6 @@ module.exports = {
     }
     
     Status code: 200
-    
-    ---
-    Failed output:
-    
-    {
-      "error": "error message"
-    }
-    Status code: 400 or 500
-    
-    ```
-  - #### Delete
-    DELETE: _stories/storyId_
-    ```
-    Success output:
-   
-    Status code: 204
     
     ---
     Failed output:

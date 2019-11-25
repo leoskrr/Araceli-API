@@ -5,13 +5,15 @@ const cors = require('cors');
 const routes = require('./routes');
 const { mongo, server } = require('./.env');
 
-mongoose.connect(`mongodb+srv://${mongo.db}`, {
+const mongodb = process.env.MONGO || mongo.db;
+const port = process.env.PORT || server.port; 
+
+mongoose.connect(`mongodb+srv://${mongodb}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).catch(err => console.log(err));
 
 const app = express();
-const port = process.env.PORT || server.port; 
 
 app.use(cors());
 app.use(express.json());
@@ -21,4 +23,3 @@ routes(app);
 app.listen(port,() => {
     console.log(`Back-end executando em ${server.ip}:${port}.`);
 })
-

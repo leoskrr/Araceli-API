@@ -9,6 +9,7 @@ module.exports = {
 
     async signIn(req, res) {
         const { email, password } = req.body;
+        const secret = process.env.SECRET || auth.secret
 
         const user = await User.findOne({ email }).select('+password');
 
@@ -23,7 +24,7 @@ module.exports = {
         user.password = undefined;
 
         //parameters: difference between tokens, application's hash
-        const token = jwt.sign({ id: user._id }, auth.secret);
+        const token = jwt.sign({ id: user._id }, secret);
 
         res.send({ user, token });
 

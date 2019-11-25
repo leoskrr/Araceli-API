@@ -11,7 +11,7 @@ mongoose.connect(`mongodb+srv://${mongo.db}`, {
 }).catch(err => console.log(err));
 
 const app = express();
-const port = process.env.PORT || server.port;
+const port = process.env.PORT || server.port; 
 
 app.use(cors());
 app.use(express.json());

@@ -165,3 +165,19 @@ module.exports = {
     Status code: 400 or 500
     
     ```
+  - #### Delete
+    DELETE: _stories/storyId_
+    ```
+    Success output:
+   
+    Status code: 204
+    
+    ---
+    Failed output:
+    
+    {
+      "error": "error message"
+    }
+    Status code: 400 or 500
+    
+    ```

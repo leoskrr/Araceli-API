@@ -20,7 +20,7 @@ module.exports = {
             existsOrError(story.description, "story's description must be informed");
 
             const storyFromDB = await Story.find({ title: story.title })
-                                           .where({ authorId: req.userId });
+                .where({ authorId: req.userId });
 
             notExistsOrError(storyFromDB, "a story with this title by this author alredy exists");
 
@@ -39,18 +39,24 @@ module.exports = {
 
     show(req, res) {
         const _id = req.params.id;
-        
+
         Story.findOne({ _id }, (err, result) => {
             if (err)
                 return res.status(500).send({ "error": err });
-            
+
             return res.send(result);
         })
-
     },
 
     async delete(req, res) {
+        const _id = req.params.id;
 
+        Story.findOneAndDelete({ _id }, (err) => {
+            if (err)
+                return res.status(500).send({ "error": err });
+            
+            return res.status(204).send();
+        });
     }
 
 }

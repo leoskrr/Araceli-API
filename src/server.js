@@ -11,13 +11,14 @@ mongoose.connect(`mongodb+srv://${mongo.db}`, {
 }).catch(err => console.log(err));
 
 const app = express();
+const port = process.env.port || server.port;
 
 app.use(cors());
 app.use(express.json());
 
 routes(app);
 
-app.listen(server.port,() => {
-    console.log(`Back-end executando em ${server.ip}:${server.port}.`);
+app.listen(port,() => {
+    console.log(`Back-end executando em ${server.ip}:${port}.`);
 })
 
